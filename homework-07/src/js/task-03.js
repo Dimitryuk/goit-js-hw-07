@@ -12,3 +12,22 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryList = document.querySelector('#gallery')
+//console.log(galleryList);
+
+//galleryList.insertAdjacentHTML('beforeEnd', '<li>  <img>  </img></li>')
+const makingGallery = ({url , alt}) => {
+  return ` <img src= ${url} alt='${alt}'>`
+}
+
+//console.log(makingGallery(images[1]));
+
+const importGallery = images.map(makingGallery).join('')
+console.log(importGallery);
+galleryList.insertAdjacentHTML("beforeend", importGallery  )
+
+const addingStyles = document.querySelector('#gallery')
+
+console.log(addingStyles);
+addingStyles.classList.add('grid')
