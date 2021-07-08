@@ -13,21 +13,24 @@ const images = [
   },
 ];
 
-const galleryList = document.querySelector('#gallery')
+const galleryList = document.querySelector('#gallery');
 //console.log(galleryList);
 
 //galleryList.insertAdjacentHTML('beforeEnd', '<li>  <img>  </img></li>')
-const makingGallery = ({url , alt}) => {
-  return ` <li><img src= ${url} alt='${alt}'></li>`
-}
+const makingGallery = ({ url, alt }) => {
+  return ` <li><img src= ${url} alt='${alt}'></li>`;
+};
 
 //console.log(makingGallery(images[1]));
 
-const importGallery = images.map(makingGallery).join('')
+const importGallery = images.map(makingGallery).join('');
 console.log(importGallery);
-galleryList.insertAdjacentHTML("beforeend", importGallery  )
+galleryList.insertAdjacentHTML('beforeend', importGallery);
 
-const addingStyles = document.querySelector('#gallery')
+const addingStyles = document.querySelector('#gallery');
 
 console.log(addingStyles);
-addingStyles.classList.add('grid')
+
+addingStyles.classList.add('grid');
+const ulItems = document.querySelectorAll('li');
+ulItems.forEach(ul => ul.classList.add('grid-item'));
