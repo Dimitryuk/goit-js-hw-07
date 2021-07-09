@@ -5,13 +5,14 @@ console.log(inputEl);
 
 const input = document.querySelector('input');
 inputEl.addEventListener('change', element => {
-  const text = element.target.value;
+    const text = element.target.value;
+    console.log(text);
 
-  if (text.length === inputLength) {
-    inputEl.classList.add('valid');
+  if (text.length === +inputLength) {
+     inputEl.classList.add('valid');
     inputEl.classList.remove('invalid');
   } else {
-    inputEl.classList.remove('valid');
+  
     inputEl.classList.add('invalid');
   }
 });
