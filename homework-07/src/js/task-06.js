@@ -1,18 +1,11 @@
-let inputEl = document.querySelector('#validation-input');
-
-let inputLength = inputEl.dataset.length;
-console.log(inputEl);
-
-const input = document.querySelector('input');
-inputEl.addEventListener('change', element => {
-    const text = element.target.value;
-    console.log(text);
-
-  if (text.length === +inputLength) {
-     inputEl.classList.add('valid');
-    inputEl.classList.remove('invalid');
+const inputField = document.querySelector(`#validation-input`);
+const maxInputValue = inputField.getAttribute(`data-length`);
+inputField.addEventListener(`input`, event => {
+  if (event.currentTarget.value.length == maxInputValue) {
+    document.querySelector(`#validation-input`).classList.remove(`invalid`);
+    document.querySelector(`#validation-input`).classList.add(`valid`);
   } else {
-  
-    inputEl.classList.add('invalid');
+    document.querySelector(`#validation-input`).classList.remove(`valid`);
+    document.querySelector(`#validation-input`).classList.add(`invalid`);
   }
 });
