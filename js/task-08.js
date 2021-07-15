@@ -31,5 +31,6 @@ refs.buttonCreate.addEventListener('click', event =>
 
 refs.buttonRefresh.addEventListener(
   'click',
-  event => (refs.boxes.innerHTML = '')
+  event => (refs.boxes.innerHTML = '',
+  refs.boxesQuantity.value=' ')
 );
